@@ -1,0 +1,18 @@
+body {
+    max-width: 600px;
+    margin: 30px auto;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+input, textarea, button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+}
+
+button {
+    background: black;
+    color: white;
+    cursor: pointer;
+}

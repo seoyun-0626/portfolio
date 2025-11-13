@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>포트폴리오 메인</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- 반응형 에러 해결 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>내 포트폴리오</h1>
+
+    <p id="totalVisits">전체 방문자수: 불러오는 중...</p>
+    <p id="todayVisits">오늘 방문자수: 불러오는 중...</p>
+
+    <a href="board.html">게시판 보러가기</a>
+
+    <h2>이력서 자동 발송</h2>
+    <input type="email" id="userEmail" placeholder="이메일 입력">
+    <button onclick="sendResume()">이력서 보내기</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="js/email.js"></script>
+
+    <!-- Firebase -->
+    <script type="module" src="js/firebase.js"></script>
+
+    <!-- 방문자 카운트 -->
+    <script type="module" src="js/visits.js"></script>
+
+</body>
+</html>

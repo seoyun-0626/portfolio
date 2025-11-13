@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>글 상세보기</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <h1>📖 글 상세보기</h1>
+
+  <div id="post"></div>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+  <script src="js/firebase.js"></script>
+
+  <script>
+    const params = new URLSearchParams(location.search);
+    const id = params.get("id");
+
+    const postDiv = document.getElementById("post");
+
+    db.collection("posts").doc(id).get().then(async doc => {
+      const data = doc.data();
+
+      // 조회수 +1
+      await db.collection("posts").doc(id).update({
+        views: data.views + 1
+      });
+
+      postDiv.innerHTML = `
+        <h2>${data.title}</h2>
+        <p>${data.content}</p>
+        <p>조회수: ${data.views + 1}</p>
+      `;
+    });
+  </script>
+
+</body>
+</html>
