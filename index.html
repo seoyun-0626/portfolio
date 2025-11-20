@@ -1,33 +1,98 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
-    <title>포트폴리오 메인</title>
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- 반응형 에러 해결 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라서윤 포트폴리오</title>
+
+    <!-- 🔥 CSS 연결 (이게 없어서 지금까지 아무 스타일도 적용이 안 된 거임) -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <h1>내 포트폴리오</h1>
+    <div class="container">
 
-    <p id="totalVisits">전체 방문자수: 불러오는 중...</p>
-    <p id="todayVisits">오늘 방문자수: 불러오는 중...</p>
+        <div data-include="header"></div>
 
-    <a href="board.html">게시판 보러가기</a>
+        <main>
 
-    <h2>이력서 자동 발송</h2>
-    <input type="email" id="userEmail" placeholder="이메일 입력">
-    <button onclick="sendResume()">이력서 보내기</button>
+            <!-- HERO SECTION -->
+            <section id="hero">
+                <div>
+                    <img src="assets/images/profile/profile.jpg" alt="Profile" class="profile-photo"
+                        style="width:250px; border-radius:10px;">
+                    <div class="hero-text">
+                        <p>Java · Spring Boot · Next.js · Python · AI</p>
+                    </div>
+                </div>
+            </section>
 
+            <!-- ABOUT SECTION -->
+            <section id="about">
+                <h2>About Me</h2>
+                <p>새로운 기술을 배우는 것을 두려워하지 않고, 성장 자체를 즐기는 개발자 라서윤입니다.</p>
+                <p>프로젝트를 만들며 배운 내용을 실전에서 적용하는 과정에서 더 발전하고 있습니다.</p>
+                <p>끊임없이 개선하며 책임감 있게 일하는 개발자가 되겠습니다.</p>
+            </section>
+
+            <!-- SKILLS SECTION -->
+            <section id="skills">
+                <h2>Skills</h2>
+                <div id="skill-cards">
+
+                    <p>⭐ FrontEnd</p>
+                    <p>HTML, CSS, JS, React, Next.js, Bootstrap</p>
+
+                    <p>⭐ BackEnd</p>
+                    <p>Java, Spring Boot, REST API, Python, Flask, MySQL</p>
+
+                    <p>⭐ AI / ML</p>
+                    <p>OpenAI API, scikit-learn</p>
+
+                    <p>⭐ DB / Cloud</p>
+                    <p>Firebase Firestore, Firebase Storage, Vercel, Railway MySQL</p>
+
+                    <p>⭐ Tools</p>
+                    <p>IntelliJ, Eclipse, VSCode, Docker, Figma, Postman</p>
+
+                    <p>⭐ Collaboration / OS</p>
+                    <p>GitHub, Notion, Slack, Windows</p>
+
+                </div>
+            </section>
+
+            <!-- PROJECTS SECTION -->
+            <section id="projects">
+                <h2>Projects</h2>
+                <div id="project-cards"></div>
+            </section>
+
+            <!-- CONTACT SECTION -->
+            <section id="contact">
+                <h2>Contact</h2>
+
+                <div>
+                    <p id="totalVisits">전체 방문자수: 불러오는 중...</p>
+                    <p id="todayVisits">오늘 방문자수: 불러오는 중...</p>
+                </div>
+
+                <div>
+                    <input type="email" id="userEmail" placeholder="이메일 입력">
+                    <button onclick="sendResume()">이력서 보내기</button>
+                </div>
+
+            </section>
+
+        </main>
+
+        <div data-include="footer"></div>
+    </div>
+    <script src="js/include.js"></script>
+    <script type="module" src="js/firebase.js"></script>
+    <script type="module" src="js/visits.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
     <script src="js/email.js"></script>
-
-    <!-- Firebase -->
-    <script type="module" src="js/firebase.js"></script>
-
-    <!-- 방문자 카운트 -->
-    <script type="module" src="js/visits.js"></script>
-
 </body>
+
 </html>
