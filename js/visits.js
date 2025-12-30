@@ -28,7 +28,13 @@ function getTodayKey() {
 // 전체 방문자 증가
 async function increaseVisitCount() {
     const ref = doc(db, "visits", "counter");
-    await updateDoc(ref, { count: increment(1) });
+    const snap = await getDoc(ref);
+
+    if (snap.exists()) {
+        await updateDoc(ref, { count: increment(1) });
+    } else {
+        await setDoc(ref, { count: 1 });
+    }
 }
 
 // 오늘 방문자 증가
