@@ -21,13 +21,13 @@
         </div>
 
 
-        <nav>
-            <a href="" data-view="portfolio">Home</a>
+        <nav class="sidebar-nav">
+            <a href="#" data-view="portfolio">Home</a>
             <a href="#skills">Skills</a>
             <a href="#background">Background</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
-            <a href="" data-view="board">Board</a>
+            <a href="#" data-view="board">Board</a>
         </nav>
 
 
@@ -279,22 +279,37 @@
         <!-- BOARD -->
 
 
-        <section class="view board-view" id="view-board">
+        <section id="view-board" class="view board-view">
             <h2>Board</h2>
-            <p class="board-desc">
-                포트폴리오에 대한 간단한 의견이나 응원을 남겨주세요.
-            </p>
 
-            <!--글 목록 -->
-            <div id="postList" class="board-list"></div>
+            <!-- 게시글 목록 -->
+            <table class="board-table">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>제목</th>
+                        <th>작성자</th>
+                        <th>작성일</th>
+                    </tr>
+                </thead>
+                <tbody id="board-body"></tbody>
+            </table>
 
-            <!--글 작성-->
+            <!-- 페이지네이션 -->
+            <div class="pagination" id="pagination"></div>
+
+            <hr />
+
+            <!-- 글쓰기 -->
             <div class="board-write">
-                <input id="title" placeholder="제목" />
-                <textarea id="content" placeholder="내용"></textarea>
-                <button id="saveBtn">등록</button>
+                <input id="write-writer" placeholder="작성자 (예: 현업개발자)" />
+                <input id="write-title" placeholder="제목" />
+                <textarea id="write-content" placeholder="내용"></textarea>
+                <button id="write-btn">등록</button>
             </div>
         </section>
+
+
 
 
 
@@ -441,10 +456,11 @@
     </div>
 
     <script type="module" src="js/firebase.js"></script>
-    <script type="module" src="js/visits.js"></script>
-    <script type="module" src="js/write.js"></script>
+    <script type="module" src="js/board-body.js"></script>
+    <script type="module" src="js/board-write.js"></script>
+    <script type="module" src="js/board-view.js"></script>
+    <script type="module" src="js/navigation.js"></script>
+    <script type="module" src="js/navigation.js"></script>
 
-    <script src="js/navigation.js"></script>
-    <script src="js/projects.js"></script>
 
 </body>

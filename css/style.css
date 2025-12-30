@@ -658,71 +658,91 @@ h3 {
 /* =========================
    BOARD
 ========================= */
-.board-list {
+/* 게시판 테이블 */
+.board-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 32px;
+}
+
+.board-table th {
+  font-size: 14px;
+  color: #9aa0a6;
+  font-weight: 500;
+  padding: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.board-table td {
+  padding: 14px 12px;
+  font-size: 14px;
+  color: #e6e6eb;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.board-table td:nth-child(1),
+.board-table td:nth-child(3),
+.board-table td:nth-child(4) {
+  text-align: center;
+}
+
+.board-table td:nth-child(2) {
+  text-align: left;
+}
+
+/* 빈 줄 */
+.board-table td[colspan] {
+  height: 44px;
+}
+
+/* 페이지네이션 */
+.pagination {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  margin-bottom: 80px;
-  max-width: 800px;
-}
-
-.board-item {
-  background: #151518;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  padding: 20px 24px;
-}
-
-.board-item h4 {
-  font-size: 18px;
-  margin-bottom: 8px;
-  color: #ffffff;
-}
-
-.board-item p {
-  font-size: 15px;
-  line-height: 1.6;
-  color: #cfd0d6;
-  margin-bottom: 10px;
-}
-
-.board-item .date {
-  font-size: 12px;
-  color: #8b8f98;
-}
-
-
-
-.board-desc {
-  font-size: 18px;
-  color: #b6b7be;
+  justify-content: center;
+  gap: 8px;
   margin-bottom: 40px;
 }
 
+.pagination button {
+  padding: 6px 12px;
+  border-radius: 4px;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background: #fff;
+  color: #111;
+}
+
+/* 글쓰기 영역 */
 .board-write {
+  max-width: 720px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  max-width: 600px;
-  margin-bottom: 60px;
 }
 
 .board-write input,
 .board-write textarea {
   background: #151518;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255,255,255,0.15);
   color: #e6e6eb;
-  padding: 12px 14px;
-  font-size: 15px;
+  padding: 12px;
+  font-size: 14px;
 }
 
 .board-write textarea {
-  min-height: 120px;
+  min-height: 160px;
   resize: vertical;
 }
 
 .board-write button {
-  align-self: flex-start;
-  padding: 8px 18px;
+  align-self: flex-end;
+  padding: 8px 20px;
   border-radius: 20px;
   border: none;
   background: #fff;
@@ -730,18 +750,19 @@ h3 {
   cursor: pointer;
 }
 
-.board-write button:hover {
-  background: #eee;
-}
+
+
 
 /* ===== View Control ===== */
 .view {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+  display: none;
 }
 
 .view.active {
+  display: block;
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
