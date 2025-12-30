@@ -24,4 +24,13 @@ document.addEventListener("DOMContentLoaded", () => {
   closeBtn.addEventListener("click", () => {
     modal.style.display = "none";
   });
+
+  window.closeModal = function () {
+    const modal = document.getElementById("project-modal");
+    modal.style.display = "none";
+
+    document
+      .querySelectorAll(".modal-body")
+      .forEach(body => body.style.display = "none");
+  };
 });
