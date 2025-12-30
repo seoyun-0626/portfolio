@@ -23,13 +23,13 @@ body {
 
 :root {
   /* 화면 크기에 따라 자동 변하는 기준 폰트 */
-  --fs-h1: clamp(32px, 4vw, 60px);
-  --fs-h2: clamp(24px, 3vw, 32px);
-  --fs-h3: clamp(20px, 2.5vw, 28px);
+  --fs-h1: clamp(34px, 3.2vw, 60px);
+  --fs-h2: clamp(22px, 2.2vw, 28px);
+  --fs-h3: clamp(18px, 1.8vw, 22px);
 
-  --fs-body-lg: clamp(16px, 1.6vw, 24px);
-  --fs-body: clamp(14px, 1.3vw, 18px);
-  --fs-small: clamp(12px, 1vw, 14px);
+  --fs-body-lg: clamp(15px, 1.2vw, 18px);
+  --fs-body: clamp(14px, 1vw, 16px);
+  --fs-small: clamp(12px, 0.9vw, 13px);
 
   /* 패딩 기준 */
   --pd-section: clamp(64px, 8vw, 100px);
@@ -220,13 +220,13 @@ body {
 }
 
 .intro-text h1 {
-  font-size: clamp(26px, 2.4vw, 40px);
+  font-size: clamp(34px, 3.2vw, 60px);
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: -0.015em;
-  color: #f2f2f4;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
+
 
 .role {
   font-size: var(--fs-body);
@@ -296,7 +296,7 @@ h3 {
 
 .skill-group h3 {
   margin-left: -12px;
-  font-size: 22px;
+  font-size: var(--fs-h3);
   font-weight: 600;
   margin-bottom: 24px;
   color: #ffffff;
@@ -310,7 +310,7 @@ h3 {
 
 .skill-group li {
   margin-left: 10px;
-  font-size: 18px;
+  font-size: var(--fs-body);
   line-height: 2.1;
   color: #d6d7dd;
 }
@@ -337,8 +337,7 @@ h3 {
 /* 제목 */
 .bg-card h3 {
   margin-left: -12px;
-  font-size: 30px;
-  /* 🔥 크게 */
+  font-size: var(--fs-h3);
   font-weight: 600;
   margin-bottom: 24px;
 }
@@ -353,8 +352,7 @@ h3 {
 }
 
 .bg-card li {
-  font-size: 20px;
-  /* 🔥 본문 키움 */
+  font-size: var(--fs-body);
   line-height: 1.7;
   margin-bottom: 20px;
   color: #e6e6eb;
@@ -363,7 +361,7 @@ h3 {
 /* 보조 텍스트 */
 .bg-sub {
   display: block;
-  font-size: 18px;
+  font-size: var(--fs-small);
   color: #9aa0a6;
   margin-top: 4px;
 }
@@ -372,7 +370,7 @@ h3 {
 .bg-desc {
 
   margin-top: 10px;
-  font-size: 18px;
+  font-size: var(--fs-small);
   color: #b6b7be;
 }
 
