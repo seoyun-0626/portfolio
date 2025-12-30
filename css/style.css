@@ -38,7 +38,7 @@ body {
 
 .visitor-box span {
   display: block;
-  font-size: 13px;
+  font-size: 20px;
   color: #ddd;
 }
 
@@ -125,6 +125,7 @@ body {
   background: rgba(46, 204, 113, 0.3);
   border-color: rgba(46, 204, 113, 0.8);
 }
+
 
 #skills,
 #projects,
@@ -350,6 +351,16 @@ h3 {
 ========================= */
 
 
+.projects {
+  min-height: 100vh;
+  padding: 140px 80px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 
 .projects h2 {
   font-size: 32px;
@@ -574,31 +585,13 @@ h3 {
   padding: 0 100px;
 }
 
+
 /* 나머지 섹션은 패딩만 */
 .skills-section,
 .background,
 .projects {
   padding: 140px 80px;
 }
-
-
-
-
-
-/* =========================
-   board
-========================= */
-
-.view {
-  display: none;
-}
-
-.view.active {
-  display: block;
-}
-
-
-
 
 /* =========================
    CONTACT
@@ -628,4 +621,84 @@ h3 {
   gap: 8px;
   font-size: 25px;
   color: #e6e6eb;
+}
+
+
+
+/* =========================
+   BOARD
+========================= */
+
+.board-desc {
+  font-size: 18px;
+  color: #b6b7be;
+  margin-bottom: 40px;
+}
+
+.board-write {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 600px;
+  margin-bottom: 60px;
+}
+
+.board-write input,
+.board-write textarea {
+  background: #151518;
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #e6e6eb;
+  padding: 12px 14px;
+  font-size: 15px;
+}
+
+.board-write textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.board-write button {
+  align-self: flex-start;
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: none;
+  background: #fff;
+  color: #111;
+  cursor: pointer;
+}
+
+.board-write button:hover {
+  background: #eee;
+}
+
+/* ===== View Control ===== */
+.view {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.view.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  position: fixed;
+  z-index: 50;
+}
+
+/* ===== Board ===== */
+.board-view {
+  position: fixed;
+  top: 0;
+  left: 240px;
+  width: calc(100% - 240px);
+  height: 100vh;
+  background: #0f0f11;
+  padding: 140px 80px;
+  overflow-y: auto;
+  z-index: 20;
 }
