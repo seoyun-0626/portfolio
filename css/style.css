@@ -411,22 +411,22 @@ h3 {
 .project-item {
   background: #151518;
   border: 1px solid rgba(255, 255, 255, 0.06);
-  padding: 40px;
-  flex: 0 0 520px;
+  padding: 28px;
+  flex: 0 0 420px;
 }
 
 .project-item h3 {
-  font-size: 32px;
+  font-size: var(--fs-h3);
   font-weight: 700;
   margin-bottom: 12px;
 }
 
 /* 설명 */
 .project-desc {
-  font-size: 18px;
+  font-size: var(--fs-body);
   color: #b6b7be;
   margin-bottom: 36px;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 /* 섹션 블록 */
@@ -436,9 +436,9 @@ h3 {
 
 /* 섹션 제목 */
 .project-section h4 {
-  font-size: 20px;
+  font-size: var(--fs-h2);
   font-weight: 600;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
   color: #ffffff;
   position: relative;
   padding-left: 14px;
@@ -628,7 +628,7 @@ h3 {
 ========================= */
 
 .contact {
-  padding: 140px 80px;
+  padding: var(--pd-section) var(--pd-side);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   background: #0f0f11;
 }
@@ -639,17 +639,17 @@ h3 {
 }
 
 .contact-desc {
-  font-size: 25px;
-  line-height: 1.7;
+  font-size: var(--fs-body);
+  line-height: 1.6;
   color: #cfd0d6;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  font-size: 25px;
+  gap: 6px;
+  font-size: var(--fs-body);
   color: #e6e6eb;
 }
 
