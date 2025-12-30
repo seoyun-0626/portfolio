@@ -51,7 +51,7 @@ async function displayCounts() {
 
     if (totalSnap.exists()) {
         document.getElementById("totalVisits").innerText =
-            "전체 방문자수: " + totalSnap.data().count;
+            "total: " + totalSnap.data().count;
     }
 
     const todayKey = getTodayKey();
@@ -60,7 +60,7 @@ async function displayCounts() {
 
     if (todaySnap.exists()) {
         document.getElementById("todayVisits").innerText =
-            "오늘 방문자수: " + todaySnap.data().count;
+            "today: " + todaySnap.data().count;
     } else {
         document.getElementById("todayVisits").innerText =
             "오늘 방문자수: 0";

@@ -2,97 +2,412 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>라서윤 포트폴리오</title>
-
-    <!-- 🔥 CSS 연결 (이게 없어서 지금까지 아무 스타일도 적용이 안 된 거임) -->
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-    <div class="container">
 
-        <div data-include="header"></div>
+    <!-- 왼쪽 고정 네비 -->
+    <aside class="sidebar">
 
-        <main>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#background">Background</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-            <!-- HERO SECTION -->
-            <section id="hero">
-                <div>
-                    <img src="assets/images/profile/profile.jpg" alt="Profile" class="profile-photo"
-                        style="width:250px; border-radius:10px;">
-                    <div class="hero-text">
-                        <p>Java · Spring Boot · Next.js · Python · AI</p>
+        <!-- 🔽 사이드바 하단 링크 -->
+        <div class="sidebar-links">
+            <a href="https://github.com/seoyun-0626" target="_blank">GitHub</a>
+            <a href="assets\resume\라서윤_입사지원서.pdf" download>이력서 다운로드</a>
+            <!-- 방문자 수는 나중에 -->
+        </div>
+
+
+    </aside>
+
+    <main class="content">
+
+        <!-- HERO -->
+        <section class="hero" id="home">
+
+            <div class="intro-wrap">
+
+                <!-- 프로필 사진 -->
+                <div class="intro-photo">
+                    <img src="assets/images/profile/profile.jpg" alt="프로필 사진">
+                </div>
+
+                <!-- 소개 텍스트 -->
+                <div class="intro-text">
+                    <h1>안녕하세요 풀스택 개발자</h1>
+                    <h1>라서윤입니다.</h1>
+                    <p class="role">Frontend · Backend · AI · Web</p>
+
+                    <p class="intro-desc">
+                        백엔드와 AI를 중심으로 이해하고 납득하는 방식으로 문제를 끝까지 해결하는
+                        개발자 라서윤 입니다.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- SKILLS -->
+        <section class="skills-section" id="skills">
+            <h2>Skills</h2>
+
+            <div class="skills-grid">
+
+                <!-- 왼쪽 컬럼 -->
+                <div class="skills-col">
+                    <div class="skill-group">
+                        <h3>◽Frontend</h3>
+                        <ul>
+                            <li>▪ HTML / CSS / JavaScript</li>
+                            <li>▪ React</li>
+                            <li>▪ Next.js (App Router)</li>
+                            <li>▪ TypeScript</li>
+                            <li>▪ Tailwind CSS</li>
+                            <li>▪ API Route 연동</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3>◽AI / Machine Learning</h3>
+                        <ul>
+                            <li>▪ Python</li>
+                            <li>▪ 텍스트 전처리</li>
+                            <li>▪ TF-IDF 벡터화</li>
+                            <li>▪ ExtraTreesClassifier</li>
+                            <li>▪ 모델 학습 및 추론</li>
+                        </ul>
+                    </div>
+
+                    <div class="skill-group">
+                        <h3>◽Database / Storage</h3>
+                        <ul>
+                            <li>▪ MySQL</li>
+                            <li>▪ 기본 SQL / 트랜잭션</li>
+                            <li>▪ Firebase Firestore</li>
+                            <li>▪ AWS S3 (파일 저장)</li>
+                        </ul>
                     </div>
                 </div>
-            </section>
 
-            <!-- ABOUT SECTION -->
-            <section id="about">
-                <h2>About Me</h2>
-                <p>새로운 기술을 배우는 것을 두려워하지 않고, 성장 자체를 즐기는 개발자 라서윤입니다.</p>
-                <p>프로젝트를 만들며 배운 내용을 실전에서 적용하는 과정에서 더 발전하고 있습니다.</p>
-                <p>끊임없이 개선하며 책임감 있게 일하는 개발자가 되겠습니다.</p>
-            </section>
+                <div class="skills-col offset">
+                    <div class="skill-group">
+                        <h3>◽Backend</h3>
+                        <ul>
+                            <li>▪ Java</li>
+                            <li>▪ Spring Boot</li>
+                            <li>▪ RESTful API 설계</li>
+                            <li>▪ 비즈니스 로직 분리</li>
+                            <li>▪ 세션 / 상태 관리</li>
+                        </ul>
+                    </div>
 
-            <!-- SKILLS SECTION -->
-            <section id="skills">
-                <h2>Skills</h2>
-                <div id="skill-cards">
+                    <div class="skill-group">
+                        <h3>◽AI Serving</h3>
+                        <ul>
+                            <li>▪ FastAPI</li>
+                            <li>▪ pkl / joblib 모델 로딩</li>
+                            <li>▪ Spring Boot ↔ AI 서버 연동</li>
+                        </ul>
+                    </div>
 
-                    <p>⭐ FrontEnd</p>
-                    <p>HTML, CSS, JS, React, Next.js, Bootstrap</p>
-
-                    <p>⭐ BackEnd</p>
-                    <p>Java, Spring Boot, REST API, Python, Flask, MySQL</p>
-
-                    <p>⭐ AI / ML</p>
-                    <p>OpenAI API, scikit-learn</p>
-
-                    <p>⭐ DB / Cloud</p>
-                    <p>Firebase Firestore, Firebase Storage, Vercel, Railway MySQL</p>
-
-                    <p>⭐ Tools</p>
-                    <p>IntelliJ, Eclipse, VSCode, Docker, Figma, Postman</p>
-
-                    <p>⭐ Collaboration / OS</p>
-                    <p>GitHub, Notion, Slack, Windows</p>
-
-                </div>
-            </section>
-
-            <!-- PROJECTS SECTION -->
-            <section id="projects">
-                <h2>Projects</h2>
-                <div id="project-cards"></div>
-            </section>
-
-            <!-- CONTACT SECTION -->
-            <section id="contact">
-                <h2>Contact</h2>
-
-                <div>
-                    <p id="totalVisits">전체 방문자수: 불러오는 중...</p>
-                    <p id="todayVisits">오늘 방문자수: 불러오는 중...</p>
+                    <div class="skill-group">
+                        <h3>◽Infra / Deployment</h3>
+                        <ul>
+                            <li>▪ Git / GitHub</li>
+                            <li>▪ GitHub Pages</li>
+                            <li>▪ Vercel</li>
+                            <li>▪ Railway</li>
+                            <li>▪ Render</li>
+                            <li>▪ Hugging Face Spaces</li>
+                            <li>▪ 환경 변수 관리</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div>
-                    <input type="email" id="userEmail" placeholder="이메일 입력">
-                    <button onclick="sendResume()">이력서 보내기</button>
+            </div>
+        </section>
+
+
+        <section class="background" id="background">
+            <h2>Background</h2>
+
+            <div class="background-grid">
+
+                <!-- Education -->
+                <div class="bg-card">
+                    <h3>◽Education</h3>
+                    <ul>
+
+                        <li>
+                            <strong>학점은행제</strong><br>
+                            컴퓨터공학 전공 재학 중<br>
+                            <span class="bg-sub">2026.08 졸업 예정</span>
+                        </li>
+
+                        <li>
+                            <strong>세경대학교</strong><br>
+                            호텔카지노경영학과 졸업
+                        </li>
+
+                    </ul>
                 </div>
 
-            </section>
+                <!-- Training -->
+                <div class="bg-card">
+                    <h3>◽Training</h3>
+                    <ul>
+                        <li>
+                            <strong>JAVA & Python 기반 빅데이터 분석<br>
+                                AI 플랫폼 개발자 과정</strong>
+                            <span class="bg-sub">코리아IT아카데미 · 2025.06 ~ 2025.12</span>
+                            <p class="bg-desc">
+                                Spring Boot·MySQL 기반 풀스택 개발<br>
+                                Python 데이터 분석·머신러닝 프로젝트 수행
+                            </p>
+                        </li>
+                    </ul>
+                </div>
 
-        </main>
+                <!-- Certifications -->
+                <div class="bg-card">
+                    <h3>◽Certifications</h3>
+                    <ul>
+                        <li>
+                            정보처리산업기사 <span class="bg-sub">(2025.12 최종합격)</span>
+                        </li>
+                    </ul>
+                </div>
 
-        <div data-include="footer"></div>
+            </div>
+        </section>
+
+
+        <!-- PROJECTS -->
+        <section class="projects" id="projects">
+            <h2>Projects</h2>
+
+            <div class="projects-scroll">
+
+                <!-- 순환마루 -->
+                <div class="project-item">
+
+                    <a href="https://frontend-seoyun.vercel.app/" target="_blank" class="project-link">
+                        <div class="project-thumb">
+                            <img src="assets/images/project/순환마루키오스크.png" alt="순환마루">
+                        </div>
+                    </a>
+
+                    <h3>순환마루</h3>
+
+                    <p class="project-desc">
+                        <span class="project-type">팀 프로젝트</span><br>
+                        이미지 인식 기반 재활용 분류 시스템
+                    </p>
+
+                    <button class="view-btn" data-project="sunhwan">
+                        상세보기
+                    </button>
+
+                </div>
+
+                <!-- MoodyMovie -->
+                <div class="project-item">
+
+                    <a href="https://moodymovie-frontend.vercel.app/" target="_blank" class="project-link">
+                        <div class="project-thumb">
+                            <img src="assets/images/project/무디무비.png" alt="MoodyMovie">
+                        </div>
+                    </a>
+
+                    <h3>MoodyMovie</h3>
+
+                    <p class="project-desc">
+                        <span class="project-type">팀 프로젝트</span><br>
+                        감정 분석 기반 영화 추천 풀스택 웹 서비스
+                    </p>
+
+                    <button class="view-btn" data-project="moodymovie">
+                        상세보기
+                    </button>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+
+        <footer id="contact" class="contact">
+            <h2>Contact</h2>
+
+            <p class="contact-desc">
+                궁금한게 있으시다면 연락주시면 감사하겠습니다.              
+            </p>
+
+            <div class="contact-info">
+                <span>📧 rsy2169@gmail.com</span>
+                <span>📞 010-5672-1993</span>
+            </div>
+        </footer>
+
+
+
+
+    </main>
+
+    <!-- 프로젝트 상세 모달 -->
+    <div class="project-modal" id="project-modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">×</button>
+
+            <!-- 순환마루 -->
+            <div class="modal-body" id="modal-sunhwan">
+                <h3>순환마루</h3>
+                <p>
+                    이미지 인식 기반 대형 폐기물 분류 및 처리 지원 키오스크 웹 서비스
+                </p>
+
+                <div class="project-section">
+                    <h4>프로젝트 개요</h4>
+                    <p>
+                        순환마루는 사용자가 대형 폐기물 이미지를 업로드하면
+                        AI 모델을 통해 품목을 인식하고,
+                        분류 결과를 기반으로 처리 절차와 비용 정보를 제공하는
+                        키오스크 형태의 웹 서비스입니다.
+                    </p>
+                </div>
+
+                <div class="project-section">
+                    <h4>역할 및 기여도</h4>
+                    <ul>
+                        <li>팀 프로젝트에서 <strong>프론트엔드, 백엔드, 배포 전담</strong></li>
+                        <li>Next.js 기반 키오스크 · 모바일 업로드 UI 구현</li>
+                        <li>Spring Boot 기반 대형 폐기물 처리 API 서버 설계</li>
+                        <li>FastAPI(YOLOv8) AI 서버 연동 및 추론 결과 처리</li>
+                        <li>이미지 업로드 → AI 추론 → 결과 반환 전체 흐름 설계</li>
+                        <li>세션 기반 상태 관리 및 결제/처리 로직 구현</li>
+                        <li>Vercel(프론트), Render(Spring), Hugging Face Spaces(AI) 배포 환경 구축</li>
+                    </ul>
+                </div>
+
+                <div class="project-section">
+                    <h4>핵심 기능</h4>
+                    <ul>
+                        <li>모바일/키오스크 이미지 업로드</li>
+                        <li>Base64 변환 후 서버 전송</li>
+                        <li>AI 서버(YOLOv8) 연동 객체 탐지</li>
+                        <li>대형 폐기물 품목 자동 분류</li>
+                        <li>처리 비용 조회 및 결제 연동</li>
+                    </ul>
+                </div>
+
+                <div class="project-section">
+                    <h4>기술 스택</h4>
+                    <ul>
+                        <li>Frontend: Next.js · TypeScript</li>
+                        <li>Backend: Java · Spring Boot</li>
+                        <li>AI Server: Python · FastAPI · YOLOv8</li>
+                        <li>Image Processing: Base64 Encoding</li>
+                        <li>Deployment: Vercel · Render · Hugging Face Spaces</li>
+                    </ul>
+                </div>
+
+                <div class="project-section">
+                    <h4>프로젝트 인사이트</h4>
+                    <p>
+                        이 프로젝트를 통해 AI 모델 자체보다,
+                        AI 서버를 실제 서비스 흐름에 안정적으로 연결하는
+                        백엔드 설계의 중요성을 체감했습니다.
+                        특히 이미지 업로드 방식(Base64), 서버 간 통신,
+                        추론 결과 가공 및 예외 처리 경험을 통해
+                        실서비스 관점의 AI 연동 경험을 쌓을 수 있었습니다.
+                    </p>
+                </div>
+
+                <a href="https://frontend-seoyun.vercel.app/" target="_blank" class="view-btn">
+                    서비스 바로가기
+                </a>
+            </div>
+
+
+            <!-- MoodyMovie -->
+            <div class="modal-body" id="modal-moodymovie">
+                <h3>MoodyMovie</h3>
+                <p>
+                    사용자 대화를 기반으로 감정을 분석하고,
+                    감정에 어울리는 영화를 추천하는 풀스택 웹 서비스
+                </p>
+
+                <div class="project-section">
+                    <h4>프로젝트 개요</h4>
+                    <p>
+                        MoodyMovie는 사용자의 대화 내용을 분석해 대표 감정과 세부 감정을 추론하고,
+                        해당 감정에 적합한 영화를 추천하는 감정 기반 영화 추천 서비스입니다.
+                        챗봇 인터페이스를 통해 자연스러운 사용자 경험을 제공하는 것을 목표로 했습니다.
+                    </p>
+                </div>
+
+                <div class="project-section">
+                    <h4>역할 및 기여도</h4>
+                    <ul>
+                        <li>팀 프로젝트에서 <strong>백엔드, AI, 배포 전담</strong></li>
+                        <li>Spring Boot 기반 API 서버 설계 및 구현</li>
+                        <li>FastAPI 기반 감정 분석 AI 서버 개발</li>
+                        <li>TF-IDF + ExtraTreesClassifier를 활용한 감정 분류 모델 학습</li>
+                        <li>TMDB API 연동 및 감정 기반 영화 추천 로직 설계</li>
+                        <li>세션 기반 대화 상태 관리 및 챗봇 흐름 제어</li>
+                        <li>Vercel · Render · Hugging Face Spaces 배포 환경 구성</li>
+                    </ul>
+                </div>
+
+                <div class="project-section">
+                    <h4>기술 스택</h4>
+                    <ul>
+                        <li>Backend: Java · Spring Boot</li>
+                        <li>AI Server: Python · FastAPI · scikit-learn</li>
+                        <li>ML: TF-IDF · ExtraTreesClassifier(세부 감정 추론)</li>
+                        <li>LLM: OpenAI GPT API (대화 요약 · 대표 감정 추론)</li>
+                        <li>External API: TMDB API</li>
+                        <li>Deployment: Vercel · Render · Hugging Face Spaces</li>
+                    </ul>
+                </div>
+
+                <div class="project-section">
+                    <h4>프로젝트 인사이트</h4>
+                    <p>
+                        이 프로젝트를 통해 AI 모델과 백엔드 서버를 분리한 구조에서
+                        서비스 간 데이터 흐름과 역할 분리의 중요성을 체감했습니다.
+                        특히 FastAPI 기반 AI 서버와 Spring Boot 백엔드 간의 연동을 직접 설계하며
+                        API 명세, 예외 처리, 상태 관리의 중요성을 실무적으로 경험할 수 있었습니다.
+                    </p>
+                    <p>
+                        또한 모델 학습부터 추론, 배포까지의 전 과정을 직접 구성하면서
+                        AI 기능이 실제 웹 서비스로 연결되는 전체 사이클을 이해하게 되었습니다.
+                    </p>
+                </div>
+
+                <a href="https://moodymovie-frontend.vercel.app/" target="_blank">
+                    서비스 바로가기
+                </a>
+
+            </div>
+        </div>
     </div>
-    <script src="js/include.js"></script>
-    <script type="module" src="js/firebase.js"></script>
-    <script type="module" src="js/visits.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-    <script src="js/email.js"></script>
+
+    <script src="js/projects.js"></script>
+
 </body>
 
 </html>
