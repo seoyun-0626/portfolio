@@ -1,4 +1,6 @@
-포트폴리오
+포트폴리오 배포
+
+
 https://seoyun-0626.github.io/portfolio/
 
 
