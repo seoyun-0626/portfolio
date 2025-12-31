@@ -212,7 +212,7 @@ body {
 .intro-photo img {
   width: clamp(130px, 20vw, 280px);
   height: auto;
-  aspect-ratio: 3 / 4;
+  object-fit: contain;
 }
 
 .intro-text {
