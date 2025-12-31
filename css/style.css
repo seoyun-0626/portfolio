@@ -639,7 +639,7 @@ h3 {
 }
 
 .contact-desc {
-  font-size: var(--fs-body);
+  font-size: 16px;
   line-height: 1.6;
   color: #cfd0d6;
   margin-bottom: 24px;
@@ -649,7 +649,7 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  font-size: var(--fs-body);
+  font-size: 18px;
   color: #e6e6eb;
 }
 
@@ -658,8 +658,27 @@ h3 {
 /* =========================
    BOARD
 ========================= */
+
+.board-header {
+  display: flex;
+  margin-top: 10px;
+  
+}
+
+.board-desc {
+  font-size: 20px;        
+  font-weight: 500;
+  color: #cfd0d6;
+   margin-left: 180px;
+
+  position: relative;
+  top: 25px;               
+  white-space: nowrap;
+}
+
 /* 게시판 테이블 */
 .board-table {
+  font-size: 15px;
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 32px;
@@ -667,9 +686,9 @@ h3 {
 
 .board-table th,
 .board-table td {
-  padding: 6px 8px;      
-  line-height: 1.3;      
-  height: 36px;         
+  padding: 6px 8px;
+  line-height: 1.3;
+  height: 36px;
 }
 
 .board-table td:nth-child(1),
@@ -713,6 +732,7 @@ h3 {
 .board-write {
   max-width: 720px;
   margin-top: 40px;
+  margin: 60px auto 0; 
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -720,12 +740,12 @@ h3 {
 
 .board-write input,
 .board-write textarea {
-  background: #151518; 
+  background: #151518;
   border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #e6e6eb; 
+  color: #e6e6eb;
 
-  padding: 8px 10px;  
-  font-size: 13px;    
+  padding: 8px 10px;
+  font-size: 13px;
   line-height: 1.4;
 }
 
