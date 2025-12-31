@@ -178,3 +178,11 @@ async function init() {
 }
 
 init();
+
+/* ===============================
+   게시글 등록 후 목록 즉시 갱신
+   =============================== */
+window.addEventListener("board-updated", async () => {
+  await loadTotalPages(); // 전체 페이지 다시 계산
+  loadPage(1);            // 1페이지 다시 로드
+});
